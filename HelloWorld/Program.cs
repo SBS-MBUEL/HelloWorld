@@ -10,6 +10,12 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
+            Console.ReadLine();
+            var authHandler = new AuthHandler();
+            var token = authHandler.ProvideToken();
+
+            Console.WriteLine(token);
+            Console.ReadLine();
         }
     }
 }
