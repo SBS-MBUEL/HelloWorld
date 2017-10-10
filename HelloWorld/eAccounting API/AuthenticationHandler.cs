@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Net;
 using System.Text;
-using System.Threading.Tasks;
 using System.Web.Script.Serialization;
 
 namespace HelloWorld
@@ -19,7 +13,7 @@ namespace HelloWorld
 
         public string ProvideToken()
         {
-            var authdata = new RequestBodyDto()
+            var authdata = new TokenRequestBodyDto()
             {
                 grant_type = grantType,
                 refresh_token = refreshToken,
@@ -43,17 +37,5 @@ namespace HelloWorld
                 return token.access_token;
             }
         }
-    }
-
-    public class TokenDto
-    {
-        public string access_token { get; set; }
-    }
-
-    public class RequestBodyDto
-    {
-        public string refresh_token { get; set; }
-        public string grant_type { get; set; }
-        public string redirect_uri { get; set; }
     }
 }
