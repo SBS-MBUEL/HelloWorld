@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HelloWorld.eAccounting_API;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,11 @@ namespace HelloWorld
 
             Console.WriteLine(token);
             Console.ReadLine();
+            var invoiceHandler = new InvoiceHandler();
+            var invoices = invoiceHandler.GetSupplierInvoices(token);
+
+            Console.WriteLine(invoices.Meta.ServerTimeUtc);
+            Console.Read();
         }
     }
 }
