@@ -26,6 +26,8 @@ namespace HelloWorld.eAccounting_API
                 //Define content type
                 client.Headers[HttpRequestHeader.ContentType] = 
                     "application/json";
+
+                //Define auth header
                 client.Headers[HttpRequestHeader.Authorization] =
                     $"Bearer {accessToken}";
 
