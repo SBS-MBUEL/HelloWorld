@@ -43,7 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AuthenticationHandler.cs" />
+    <Compile Include="eAccounting API\AuthenticationHandler.cs" />
+    <Compile Include="eAccounting API\SupplierInvoicesApiDto.cs" />
+    <Compile Include="eAccounting API\TokenDto.cs" />
+    <Compile Include="eAccounting API\TokenRequestBodyDto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
