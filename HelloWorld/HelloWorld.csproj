@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="eAccounting API\AuthenticationHandler.cs" />
+    <Compile Include="eAccounting API\InvoiceHandler.cs" />
     <Compile Include="eAccounting API\SupplierInvoicesApiDto.cs" />
     <Compile Include="eAccounting API\TokenDto.cs" />
     <Compile Include="eAccounting API\TokenRequestBodyDto.cs" />
