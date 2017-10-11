@@ -12,6 +12,11 @@ namespace HelloWorld.eAccounting_API
     {
         private readonly string supplierInvoiceUri = "https://eaccountingapi-sandbox.test.vismaonline.com/v2/supplierinvoices";
 
+        /// <summary>
+        /// Provide access token in order to perform the API request
+        /// </summary>
+        /// <param name="accessToken">The authentication token provided by the AuthenticationHandler</param>
+        /// <returns></returns>
         public SupplierInvoicesApiDto GetSupplierInvoices(string accessToken)
         {
             var jss = new JavaScriptSerializer();
