@@ -20,7 +20,15 @@ namespace HelloWorld
             var invoiceHandler = new InvoiceHandler();
             var invoices = invoiceHandler.GetSupplierInvoices(token);
 
-            Console.WriteLine(invoices.Meta.ServerTimeUtc);
+            var machineLearningHandler = new MachineLearningInvoiceHandler();
+            Console.WriteLine("Looping invoices...");
+            foreach (var invoice in invoices)
+            {
+                
+                Console.WriteLine(machineLearningHandler.ValidateInvoice(invoice));
+                Console.ReadLine();
+            }
+
             Console.Read();
         }
     }

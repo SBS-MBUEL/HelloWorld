@@ -9,7 +9,7 @@ namespace HelloWorld.eAccounting_API
     public class SupplierInvoicesApiDto
     {
         public Meta Meta { get; set; }
-        public List<SupplierInvoiceApi> SupplierInvoices { get; set; }
+        public List<SupplierInvoiceApi> Data { get; set; }
     }
 
     public class Meta
