@@ -12,17 +12,7 @@ namespace HelloWorld
             var authHandler = new AuthHandler();
             var token = authHandler.ProvideToken();
 
-            Console.WriteLine("Access token aquired.");
-            var invoiceHandler = new InvoiceHandler();
-            var invoices = invoiceHandler.GetSupplierInvoices(token);
-
-            var machineLearningHandler = new MachineLearningInvoiceHandler();
-            Console.WriteLine("Looping invoices...");
-            foreach (var invoice in invoices)
-            {
-                
-                Console.WriteLine(machineLearningHandler.ValidateInvoice(invoice));
-            }
+            //Insert code here, have fun :)
 
             Console.Read();
         }

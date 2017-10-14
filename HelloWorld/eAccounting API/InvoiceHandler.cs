@@ -56,5 +56,38 @@ namespace HelloWorld.eAccounting_API
                 return supplierInvoices;
             }
         }
+
+        public SupplierInvoiceApi GetSingleSupplierInvoice(string accessToken)
+        {
+            var jss = new JavaScriptSerializer();
+            var supplierInvoice = new SupplierInvoiceApi();
+
+            using (var client = new WebClient())
+            {
+                //Encode...
+                client.Encoding = Encoding.UTF8;
+
+                //Define content type
+                client.Headers[HttpRequestHeader.ContentType] =
+                    "application/json";
+
+                //Define auth header
+                client.Headers[HttpRequestHeader.Authorization] =
+                    $"Bearer {accessToken}";
+
+                //Call api and save response
+                // Here are a few Id's of existing invoices that you can pass in the request.
+                // a31d5f22-0c1b-40ff-be0b-6228fcb87986
+                // 3e598116-58ab-4780-a040-7b23de47c347
+                // b6e31c41-279b-4f06-841f-5505b548eddc
+                var response = client.DownloadString($"{supplierInvoiceUri}/a31d5f22-0c1b-40ff-be0b-6228fcb87986");
+
+
+                //Convert response to Datamodel
+                supplierInvoice = jss.Deserialize<SupplierInvoiceApi>(response);
+            }
+
+            return supplierInvoice;
+        }
     }
 }

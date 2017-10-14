@@ -11,3 +11,10 @@ C:\Code\HelloWorld\HelloWorld\bin\Debug\HelloWorld.pdb
 C:\Code\HelloWorld\HelloWorld\obj\Debug\HelloWorld.csprojResolveAssemblyReference.cache
 C:\Code\HelloWorld\HelloWorld\obj\Debug\HelloWorld.exe
 C:\Code\HelloWorld\HelloWorld\obj\Debug\HelloWorld.pdb
+C:\HelloWorld\HelloWorld\bin\Debug\HelloWorld.exe.config
+C:\HelloWorld\HelloWorld\bin\Debug\HelloWorld.exe
+C:\HelloWorld\HelloWorld\bin\Debug\HelloWorld.pdb
+C:\HelloWorld\HelloWorld\obj\Debug\HelloWorld.csprojResolveAssemblyReference.cache
+C:\HelloWorld\HelloWorld\obj\Debug\HelloWorld.csproj.CoreCompileInputs.cache
+C:\HelloWorld\HelloWorld\obj\Debug\HelloWorld.exe
+C:\HelloWorld\HelloWorld\obj\Debug\HelloWorld.pdb
