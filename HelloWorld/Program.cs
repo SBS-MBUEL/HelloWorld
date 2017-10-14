@@ -1,9 +1,5 @@
 ﻿using HelloWorld.eAccounting_API;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HelloWorld
 {
@@ -11,12 +7,12 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Press enter to start.");
             Console.ReadLine();
             var authHandler = new AuthHandler();
             var token = authHandler.ProvideToken();
 
-            Console.WriteLine(token);
-            Console.ReadLine();
+            Console.WriteLine("Access token aquired.");
             var invoiceHandler = new InvoiceHandler();
             var invoices = invoiceHandler.GetSupplierInvoices(token);
 
@@ -26,7 +22,6 @@ namespace HelloWorld
             {
                 
                 Console.WriteLine(machineLearningHandler.ValidateInvoice(invoice));
-                Console.ReadLine();
             }
 
             Console.Read();

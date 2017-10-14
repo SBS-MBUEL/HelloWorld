@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Net;
 using System.Text;
-using System.Threading.Tasks;
 using System.Web.Script.Serialization;
 
 namespace HelloWorld.eAccounting_API
 {
     public class InvoiceHandler
     {
-        private string supplierInvoiceUri = "https://eaccountingapi-sandbox.test.vismaonline.com/v2/supplierinvoices";
+        private string supplierInvoiceUri = "https://eaccountingapi-sandbox.test.vismaonline.com/v2/supplierinvoicedrafts";
 
         /// <summary>
         /// Provide access token in order to perform the API request
@@ -48,7 +45,7 @@ namespace HelloWorld.eAccounting_API
                 while(deserializedResponse.Meta.TotalNumberOfPages >= currentPage)
                 {
                     currentPage++;
-                    supplierInvoiceUri = $"https://eaccountingapi-sandbox.test.vismaonline.com/v2/supplierinvoices?$page={currentPage}";
+                    supplierInvoiceUri = $"https://eaccountingapi-sandbox.test.vismaonline.com/v2/supplierinvoicedrafts?$page={currentPage}";
 
                     var pageResponse = client.DownloadString(supplierInvoiceUri);
                     var deserializedPageResponse = jss.Deserialize<SupplierInvoicesApiDto>(pageResponse);
